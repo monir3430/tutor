@@ -273,7 +273,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Parallax effect for hero section
+// Parallax effect for a hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');

@@ -6,14 +6,14 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #10b981;
+    --primary-color: #0355df;
+    --secondary-color: #001e1d;
     --accent-color: #f59e0b;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
+    --text-primary: #032359;
+    --text-secondary: #085003;
     --background-light: #f8fafc;
-    --background-white: #ffffff;
-    --border-color: #e2e8f0;
+    --background-white: rgba(251, 181, 192, 0.8);
+    --border-color: rgba(220, 199, 200, 0.98);
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -40,7 +40,7 @@ body.night-mode {
     --text-primary: #e2e8f0;
     --text-secondary: #94a3b8;
     --background-light: #1a202c;
-    --background-white: #2d3748;
+    --background-white: #7c7979;
     --border-color: #4a5568;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
@@ -50,6 +50,56 @@ body.night-mode {
     --gradient-secondary: linear-gradient(135deg, #a78bfa 0%, #f687b3 100%);
     --gradient-accent: linear-gradient(135deg, #63b3ed 0%, #81e6d9 100%);
 }
+
+/* Blink*/
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 10px #0033ff, 0 0 20px #00f6ff, 0 0 30px #0022ff;
+    }
+    50% {
+        opacity: 0.6;
+        text-shadow: 0 0 5px #ff0026, 0 0 10px #000dff;
+    }
+}
+
+.hero-stats .stat-number, .degree{
+    animation: blink 1.5s infinite;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+@keyframes glowScale {
+    0% {
+        transform: scale(1);
+        color: #f6062c; /* শুরুর রঙ (লাল টাইপ) */
+        text-shadow: 0 0 10px #ff6b6b, 0 0 20px #430000;
+    }
+    50% {
+        transform: scale(1.2); /* বড় হয় */
+        color: #ffa502; /* মাঝের রঙ (গোল্ডেন টাইপ) */
+        text-shadow: 0 0 15px #ffa502, 0 0 25px #1bff02;
+    }
+    100% {
+        transform: scale(1);
+        color: #35ff1e; /* শেষের রঙ (নীল টাইপ) */
+        text-shadow: 0 0 10px #ff1e40, 0 0 20px #ff0245;
+    }
+}
+
+.logo-subtitle {
+    animation: glowScale 2s infinite ease-in-out;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 40px;
+}
+
+
+
+
+/* night mood*/
+
 
 body.night-mode .navbar {
     background: rgba(45, 55, 72, 0.95);
@@ -215,7 +265,7 @@ p {
 .logo h2 {
     color: var(--primary-color);
     margin-bottom: 0;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
 }
 
 .logo-subtitle {
@@ -401,19 +451,22 @@ p {
 }
 
 /* Section Styles */
+.section-margin{
+    margin-top: 30px;
+}
 section {
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 2.9rem;
     color: var(--text-primary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .section-subtitle {
@@ -423,7 +476,7 @@ section {
 
 /* About Section */
 .about {
-    background: var(--background-white);
+    background: var(--background-white)
 }
 
 .about-content {
@@ -466,12 +519,14 @@ section {
 
 .info-card h3 {
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.9rem;
+    font-size:  1.9rem;
+    border-bottom: 3px solid var(--border-color);
 }
 
 .education-item {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -506,6 +561,38 @@ section {
 .value {
     color: var(--text-secondary);
 }
+
+/*Headline Animation*/
+
+.breaking-news {
+    position: relative;
+    overflow: hidden;
+    background-color: #ff0062;
+    color: white;
+    padding: 2px 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.breaking-news h3 {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: scroll-left 15s linear infinite;
+    font-size: 18px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
 
 /* About Section */
 /*.about {*/
@@ -597,7 +684,7 @@ section {
 /* Services Section */
 .services {
     background: var(--background-light);
-    padding-top: 15px;
+    padding-top: 80px;
 }
 
 .services-grid {
