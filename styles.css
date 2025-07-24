@@ -31,7 +31,6 @@ body {
     overflow-x: hidden;
 }
 
-
 /* Night Mode Styles */
 body.night-mode {
     --primary-color: #93c5fd;
@@ -62,6 +61,8 @@ body.night-mode {
         text-shadow: 0 0 5px #ff0026, 0 0 10px #000dff;
     }
 }
+
+
 
 .hero-stats .stat-number, .degree{
     animation: blink 1.5s infinite;
@@ -118,6 +119,7 @@ body.night-mode .highlight {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+
 }
 
 body.night-mode .floating-card {
@@ -246,11 +248,12 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(220, 199, 199, 0.75);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     box-shadow: var(--shadow-sm);
+    height: 70px;
 }
 
 .nav-container {
@@ -321,7 +324,7 @@ p {
 
 /* Hero Section */
 .hero {
-    padding: 120px 0 80px;
+    padding: 150px 0 80px;
     background: linear-gradient(135deg, #a2b0ea 0%, #7b39bd 100%);
     color: white;
     overflow: hidden;
@@ -452,10 +455,10 @@ p {
 
 /* Section Styles */
 .section-margin{
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 section {
-    padding: 100px 0;
+    padding: 120px 0;
 }
 
 .section-header {
@@ -577,8 +580,8 @@ section {
     display: inline-block;
     white-space: nowrap;
     padding-left: 100%;
-    animation: scroll-left 15s linear infinite;
-    font-size: 18px;
+    animation: scroll-left 20s linear infinite;
+    font-size: 17px;
 }
 
 @keyframes scroll-left {
@@ -683,8 +686,9 @@ section {
 
 /* Services Section */
 .services {
+    /*margin-top:  2rem;*/
     background: var(--background-light);
-    padding-top: 80px;
+    padding-top: 120px;
 }
 
 .services-grid {
@@ -1250,6 +1254,7 @@ section {
 
     .hero {
         padding: 100px 0 60px;
+
     }
 
     .hero-title {
