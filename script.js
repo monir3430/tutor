@@ -14,7 +14,7 @@ if (themeToggle) {
         }
     });
 
-    // Apply saved theme on page load
+    // Apply saved theme on pageload
     document.addEventListener('DOMContentLoaded', () => {
         if (localStorage.getItem('theme') === 'night-mode') {
             document.body.classList.add('night-mode');
@@ -36,7 +36,7 @@ navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
+// Close the mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -108,7 +108,7 @@ function animateCounter(element, target, suffix = '+', duration = 2000) {
     }, 16);
 }
 
-// Trigger counter animation when stats section is visible
+// Trigger counter-animation when a stats section is visible
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
