@@ -26,7 +26,7 @@
 - ইংরেজি ফাংশন নেম বজায় রাখা
 
 ## 🚀 লাইভ ওয়েবসাইট
-**URL:** https://wtdjeqgw.manus.space
+**URL:** https://monir3430.github.io/tutor/
 
 ## 📁 ফাইল স্ট্রাকচার
 ```
